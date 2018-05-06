@@ -51,16 +51,12 @@ Stopped at: 0x588919c
 >           }
 ```
 
-vim-go의 built-in debugger을 사용하는방법..
+vim-go의 built-in debugger을 사용하는방법..  
+vim-go 설치이후 빔내에서 `F9`를 눌러버리면, `>` 이런식으로 브레이크 포인터가 생긴다.  
+이후 사용방법은 vim-go 레퍼런스에 자세하게 나와있다. https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt  
 
-vim-go 설치이후 빔내에서 `F9`를 눌러버리면, `>` 이런식으로 브레이크 포인터가 생긴다.
-이후 사용방법은 vim-go 레퍼런스에 자세하게 나와있다. https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt
-
-`사실 vim-go 를 적절하게 쓰면 delv를 쓸 필요조차 없다`
 `F9  Breakpoint`, `F8 Continue`, `F10 Next`, `F11 Step`
 ```
-:GoDebugBreakpoint [linenr]
-
 Toggle breakpoint for the [linenr]. [linenr] defaults to the current line
 if it is omitted. A line with a breakpoint will have the
 {godebugbreakpoint} |:sign| placed on it. The line the program is
@@ -87,3 +83,5 @@ currently halted on will have the {godebugcurline} sign.
 *(go-debug-next)*
 
 ```
+
+## 개인적으로 dlv를 cli 에서 사용하는게 더 좋은 것 같다.  
