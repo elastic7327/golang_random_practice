@@ -50,3 +50,38 @@ Stopped at: 0x588919c
 (dlv)
 >           }
 ```
+
+vim-go의 built-in debugger을 사용하는방법..
+
+vim-go 설치이후 빔내에서 `F9`를 눌러버리면, `>` 이런식으로 브레이크 포인터가 생긴다.
+이후 사용방법은 vim-go 레퍼런스에 자세하게 나와있다. https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt
+```
+:GoDebugBreakpoint [linenr]
+
+Toggle breakpoint for the [linenr]. [linenr] defaults to the current line
+if it is omitted. A line with a breakpoint will have the
+{godebugbreakpoint} |:sign| placed on it. The line the program is
+currently halted on will have the {godebugcurline} sign.
+
+            *hl-GoDebugCurrent* *hl-GoDebugBreakpoint*
+                A line with a breakpoint will be highlighted with the {GoDebugBreakpoint}
+                    group; the line the program is currently halted on will be highlighted
+                        with {GoDebugCurrent}.
+
+                            Mapped to <F9> by default.
+
+*:GoDebugContinue*
+*(go-debug-continue)*
+
+
+:GoDebugContinue
+
+    Continue execution until breakpoint or program termination. It will start
+        the program if it hasn't been started yet.
+
+    Mapped to <F5> by default.
+
+*:GoDebugNext*
+*(go-debug-next)*
+
+```
