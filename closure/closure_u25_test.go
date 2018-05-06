@@ -37,7 +37,6 @@ func calc() func(x int) int {
 	return func(x int) int {
 		return a*x + b
 	}
-
 }
 
 func TestClosureFunc(t *testing.T) {
