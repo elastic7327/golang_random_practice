@@ -17,6 +17,8 @@ func (d Duck) feathers() {
 }
 
 type Person struct {
+	name string
+	age  int
 }
 
 func (p Person) quack() {
