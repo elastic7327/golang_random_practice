@@ -70,5 +70,4 @@ func TestRangeWorks(t *testing.T) {
 	for v := range cc {
 		fmt.Println(v)
 	}
-
 }
